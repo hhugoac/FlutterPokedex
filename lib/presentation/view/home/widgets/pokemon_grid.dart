@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pokedex/model/pokemon.dart';
 import 'package:pokedex/presentation/bloc/bloc/home_bloc.dart';
-import 'package:pokedex/presentation/view/widgets/pokemon_item.dart';
+import 'package:pokedex/presentation/view/home/widgets/pokemon_item.dart';
 
 class PokemonGrid extends StatefulWidget {
   final List<Pokemon> pokemonList;

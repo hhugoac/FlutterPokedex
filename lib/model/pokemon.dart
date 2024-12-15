@@ -6,7 +6,7 @@ part 'pokemon.g.dart';
 @freezed
 class Pokemon with _$Pokemon {
   factory Pokemon({
-    String? id,
+    int? id,
     @Default('') String name,
     String? url,
     int? height,
@@ -25,5 +25,5 @@ class Pokemon with _$Pokemon {
   String? get pokemonId => id?.toString() ?? url?.split('/').elementAt(6);
 
   String get imageUrl =>
-      'https://github.com/PokeAPI/sprites/tree/master/sprites/pokemon/other/official-artwork/';
+      'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/';
 }
