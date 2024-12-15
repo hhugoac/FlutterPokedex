@@ -26,11 +26,12 @@ class PokemonRepositoryImpl implements PokemonRepository {
         _pokemonStreamController.addError('No data');
         return;
       }
-
-      final pokemonList = response.results ?? [];
+      offset += limit;
       final currentList = _pokemonStreamController.hasValue
           ? _pokemonStreamController.value
           : [];
+      final pokemonList = response.results ?? [];
+
       hasReachedMax = pokemonList.length < limit;
       _pokemonStreamController.add([...currentList, ...pokemonList]);
     } catch (e) {

@@ -6,13 +6,24 @@ part 'pokemon.g.dart';
 @freezed
 class Pokemon with _$Pokemon {
   factory Pokemon({
-    @Default('0') String id,
-    @Default('0') String name,
+    String? id,
+    @Default('') String name,
     String? url,
     int? height,
     int? weight,
   }) = _Pokemon;
 
+  const Pokemon._();
+
   factory Pokemon.fromJson(Map<String, dynamic> json) =>
       _$PokemonFromJson(json);
+
+  String? get image {
+    return '$imageUrl$pokemonId.png';
+  }
+
+  String? get pokemonId => id?.toString() ?? url?.split('/').elementAt(6);
+
+  String get imageUrl =>
+      'https://github.com/PokeAPI/sprites/tree/master/sprites/pokemon/other/official-artwork/';
 }

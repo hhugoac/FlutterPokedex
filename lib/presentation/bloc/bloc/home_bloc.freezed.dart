@@ -315,7 +315,7 @@ mixin _$HomeState {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(_LoadInProgress value) loadInProgress,
+    required TResult Function(LoadInProgress value) loadInProgress,
     required TResult Function(_LoadSuccess value) loadSuccess,
     required TResult Function(_LoadFailure value) loadFailure,
   }) =>
@@ -323,7 +323,7 @@ mixin _$HomeState {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(_LoadInProgress value)? loadInProgress,
+    TResult? Function(LoadInProgress value)? loadInProgress,
     TResult? Function(_LoadSuccess value)? loadSuccess,
     TResult? Function(_LoadFailure value)? loadFailure,
   }) =>
@@ -331,7 +331,7 @@ mixin _$HomeState {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(_LoadInProgress value)? loadInProgress,
+    TResult Function(LoadInProgress value)? loadInProgress,
     TResult Function(_LoadSuccess value)? loadSuccess,
     TResult Function(_LoadFailure value)? loadFailure,
     required TResult orElse(),
@@ -438,7 +438,7 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(_LoadInProgress value) loadInProgress,
+    required TResult Function(LoadInProgress value) loadInProgress,
     required TResult Function(_LoadSuccess value) loadSuccess,
     required TResult Function(_LoadFailure value) loadFailure,
   }) {
@@ -449,7 +449,7 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(_LoadInProgress value)? loadInProgress,
+    TResult? Function(LoadInProgress value)? loadInProgress,
     TResult? Function(_LoadSuccess value)? loadSuccess,
     TResult? Function(_LoadFailure value)? loadFailure,
   }) {
@@ -460,7 +460,7 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(_LoadInProgress value)? loadInProgress,
+    TResult Function(LoadInProgress value)? loadInProgress,
     TResult Function(_LoadSuccess value)? loadSuccess,
     TResult Function(_LoadFailure value)? loadFailure,
     required TResult orElse(),
@@ -497,7 +497,7 @@ class __$$LoadInProgressImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$LoadInProgressImpl implements _LoadInProgress {
+class _$LoadInProgressImpl implements LoadInProgress {
   const _$LoadInProgressImpl();
 
   @override
@@ -555,7 +555,7 @@ class _$LoadInProgressImpl implements _LoadInProgress {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(_LoadInProgress value) loadInProgress,
+    required TResult Function(LoadInProgress value) loadInProgress,
     required TResult Function(_LoadSuccess value) loadSuccess,
     required TResult Function(_LoadFailure value) loadFailure,
   }) {
@@ -566,7 +566,7 @@ class _$LoadInProgressImpl implements _LoadInProgress {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(_LoadInProgress value)? loadInProgress,
+    TResult? Function(LoadInProgress value)? loadInProgress,
     TResult? Function(_LoadSuccess value)? loadSuccess,
     TResult? Function(_LoadFailure value)? loadFailure,
   }) {
@@ -577,7 +577,7 @@ class _$LoadInProgressImpl implements _LoadInProgress {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(_LoadInProgress value)? loadInProgress,
+    TResult Function(LoadInProgress value)? loadInProgress,
     TResult Function(_LoadSuccess value)? loadSuccess,
     TResult Function(_LoadFailure value)? loadFailure,
     required TResult orElse(),
@@ -589,8 +589,8 @@ class _$LoadInProgressImpl implements _LoadInProgress {
   }
 }
 
-abstract class _LoadInProgress implements HomeState {
-  const factory _LoadInProgress() = _$LoadInProgressImpl;
+abstract class LoadInProgress implements HomeState {
+  const factory LoadInProgress() = _$LoadInProgressImpl;
 }
 
 /// @nodoc
@@ -707,7 +707,7 @@ class _$LoadSuccessImpl implements _LoadSuccess {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(_LoadInProgress value) loadInProgress,
+    required TResult Function(LoadInProgress value) loadInProgress,
     required TResult Function(_LoadSuccess value) loadSuccess,
     required TResult Function(_LoadFailure value) loadFailure,
   }) {
@@ -718,7 +718,7 @@ class _$LoadSuccessImpl implements _LoadSuccess {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(_LoadInProgress value)? loadInProgress,
+    TResult? Function(LoadInProgress value)? loadInProgress,
     TResult? Function(_LoadSuccess value)? loadSuccess,
     TResult? Function(_LoadFailure value)? loadFailure,
   }) {
@@ -729,7 +729,7 @@ class _$LoadSuccessImpl implements _LoadSuccess {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(_LoadInProgress value)? loadInProgress,
+    TResult Function(LoadInProgress value)? loadInProgress,
     TResult Function(_LoadSuccess value)? loadSuccess,
     TResult Function(_LoadFailure value)? loadFailure,
     required TResult orElse(),
@@ -833,7 +833,7 @@ class _$LoadFailureImpl implements _LoadFailure {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(_LoadInProgress value) loadInProgress,
+    required TResult Function(LoadInProgress value) loadInProgress,
     required TResult Function(_LoadSuccess value) loadSuccess,
     required TResult Function(_LoadFailure value) loadFailure,
   }) {
@@ -844,7 +844,7 @@ class _$LoadFailureImpl implements _LoadFailure {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(_LoadInProgress value)? loadInProgress,
+    TResult? Function(LoadInProgress value)? loadInProgress,
     TResult? Function(_LoadSuccess value)? loadSuccess,
     TResult? Function(_LoadFailure value)? loadFailure,
   }) {
@@ -855,7 +855,7 @@ class _$LoadFailureImpl implements _LoadFailure {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(_LoadInProgress value)? loadInProgress,
+    TResult Function(LoadInProgress value)? loadInProgress,
     TResult Function(_LoadSuccess value)? loadSuccess,
     TResult Function(_LoadFailure value)? loadFailure,
     required TResult orElse(),
