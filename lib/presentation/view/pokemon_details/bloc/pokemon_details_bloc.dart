@@ -26,7 +26,7 @@ class PokemonDetailsBloc
       emit(const PokemonDetailsState.loadFailure());
       return;
     }
-    await _pokemonRepository.getPokemon(int.parse(id)).then((pokemon) {
+    await _pokemonRepository.getPokemon(id).then((pokemon) {
       emit(PokemonDetailsState.loadSuccess(pokemon));
     }).catchError((error) {
       log(error);

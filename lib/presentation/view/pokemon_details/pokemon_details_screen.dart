@@ -19,7 +19,7 @@ class PokemonDetailsScreen extends StatelessWidget {
       ),
       body: Column(
         children: [
-          if (pokemon.image?.isEmpty ?? false)
+          if (pokemon.image?.isNotEmpty ?? false)
             Hero(
               tag: 'pokemon-${pokemon.pokemonId}',
               child: Image(image: CachedNetworkImageProvider(pokemon.image!)),

@@ -16,6 +16,6 @@ abstract class PokemonApi {
     @Query('limit') int? offset,
   });
 
-  @GET('pokemon/{id}')
-  Future<Pokemon> getPokemon(@Path('id') int? id);
+  @GET('pokemon/{query}/')
+  Future<Pokemon> getPokemon(@Path('query') String? id);
 }

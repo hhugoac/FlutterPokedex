@@ -13,6 +13,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
   HomeBloc(this._pokemonRepository) : super(const HomeState.initial()) {
     on<_Load>(_onLoad);
     on<_ListenPokemonList>(_onListenPokemonList);
+    on<_Search>(_onSearchPokemon);
   }
 
   final PokemonRepository _pokemonRepository;
@@ -30,5 +31,18 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
       onData: HomeState.loadSuccess,
       onError: (error, stackTrace) => const HomeState.loadFailure(),
     );
+  }
+
+  Future<void> _onSearchPokemon(_Search event, Emitter<HomeState> emit) async {
+    if (state is LoadInProgress) return;
+
+    emit(const HomeState.loadInProgress());
+    try {
+      final pokemon =
+          await _pokemonRepository.searchPokemon(event.pokemon.toLowerCase());
+      emit(HomeState.pokemonFound(pokemon));
+    } catch (_) {
+      emit(const HomeState.pokemonNotFound());
+    }
   }
 }
