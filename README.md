@@ -41,11 +41,11 @@ flutter run
 The project follows clean architecture principles:
 
 - 📁 lib/
-  ├── 📁 config/ (Common utilities, dependency injection)
-  ├── 📁 data/ (Data layer with repositories and models)
-  ├── 📁 domain/ (Business logic and entities)
-  ├── 📁 model/ (Model class)
-  ├── 📁 presentation/ (UI layer with BLoC and screens)
+  ├── 📁 config/ (Common utilities, dependency injection)\n
+  ├── 📁 data/ (Data layer with repositories and models)\n
+  ├── 📁 domain/ (Business logic and entities)\n
+  ├── 📁 model/ (Model class)\n
+  ├── 📁 presentation/ (UI layer with BLoC and screens)\n
   └── 📁 route/ (Navigation setup)
 
 ## 🔧 Dependencies
