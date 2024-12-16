@@ -32,7 +32,7 @@ class PokemonRepositoryImpl implements PokemonRepository {
           : [];
       final pokemonList = response.results ?? [];
 
-      hasReachedMax = pokemonList.length < limit;
+      hasReachedMax = pokemonList.length > limit;
       _pokemonStreamController.add([...currentList, ...pokemonList]);
     } catch (e) {
       _pokemonStreamController.addError(e);
